@@ -1,0 +1,416 @@
+<!doctype html>
+  <html>
+    <head>
+      <title>you're a surface, i'm a surface</title>
+      <link rel="shortcut icon" href="icon.png">
+      <meta charset="UTF-8">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inconsolata:wght@200..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+      <style>
+
+        body {
+          background-color: #fffcf7;
+        }
+
+        <!-- font taken from Google fonts -->
+        .cormorant-garamond-regular {
+          font-family: "Cormorant Garamond", serif;
+          font-weight: 300;
+          font-style: normal;
+        }
+
+        /* first element */
+        .text {
+          position: absolute;
+          color: #89cd32;
+          background-color: #eff4ff;
+          text-shadow: 2px 2px 10px rgb(255, 220, 220);
+          padding: 10px;
+          border-top: 2px dotted #ffa187;
+          border-left: 3px solid #5b845d;
+          border-right: 4px dashed #bf73f6;
+          border-bottom: 2px double #7273e3;
+          font-family: "Cormorant Garamond";
+          text-align: left;
+          opacity: .4;
+        }
+
+
+        #biglink {
+          font-size: 64px;
+          z-index: 20;
+        }
+
+        a:link{
+          color: black;
+          text-decoration: none;
+        }
+
+        a:visited{
+          color: rgb(244, 122, 29);
+          text-decoration: none;
+        }
+
+        a:hover{
+          color: rgb(46, 189, 91);
+          text-decoration: none;
+        }
+
+        a:active{
+          color: rgb(52, 72, 255);
+          text-decoration: none;
+        }
+
+
+        #p1 {
+          width: 400px;
+          left: 80px;
+          top: 120px;
+
+          font-size: 17px;
+          opacity: 1;
+        }
+
+        #p2 {
+          width: 700px;
+          right: 30px;
+          top: 550px;
+          border-top: 1px dotted #5b845d;
+          border-left: 2px solid #ffa187;
+          border-right: 5px dotted #bf73f6;
+          border-bottom: 2px dotted #7273e3;
+
+          font-size: 17px;
+          opacity: 1;
+        }
+
+        #p3 {
+          width: 600px;
+          left: 20px;
+          top: 1000px;
+          border-left: 2px dotted #ffa187;
+          border-bottom: 3px solid #5b845d;
+          border-top: 4px dashed #bf73f6;
+          border-right: 2px double #7273e3;
+
+          font-size: 15px;
+          opacity: 1;
+        }
+
+        #p4 {
+          width: 300px;
+          right: 100px;
+          top: 1500px;
+          border-right: 2px dotted #ffa187;
+          border-top: 3px solid #5b845d;
+          border-right: 2px dashed #bf73f6;
+          border-left: 4px double #7273e3;
+
+          font-size: 16px;
+          opacity: 1;
+        }
+
+        #p5 {
+          width: 400px;
+          left: 80px;
+          top: 1800px;
+          border-top: 1px dotted #5b845d;
+          border-left: 2px solid #ffa187;
+          border-right: 5px dotted #bf73f6;
+          border-bottom: 2px dotted #7273e3;
+
+
+          font-size: 16px;
+          opacity: 0.95;
+        }
+
+        #p6 {
+          width: 500px;
+          right: 300px;
+          top: 2300px;
+          border-left: 2px dotted #ffa187;
+          border-bottom: 3px solid #5b845d;
+          border-top: 4px dashed #bf73f6;
+          border-right: 2px double #7273e3;
+          font-size: 16px;
+          opacity: 0.9;
+        }
+
+        #p7 {
+          width: 400px;
+          right: 50px;
+          top: 2550px;
+          border-right: 2px dotted #ffa187;
+          border-top: 3px solid #5b845d;
+          border-right: 2px dashed #bf73f6;
+          border-left: 4px double #7273e3;
+          font-size: 15px;
+          opacity: 0.95;
+        }
+
+        #p8 {
+          width: 600px;
+          left: 80px;
+          top: 3000px;
+          border-top: 1px dotted #5b845d;
+          border-left: 2px solid #ffa187;
+          border-right: 5px dotted #bf73f6;
+          border-bottom: 2px dotted #7273e3;
+          font-size: 16px;
+          opacity: 1;
+        }
+
+        #p9 {
+          width: 300px;
+          right: 300px;
+          top: 3400px;
+
+          font-size: 16px;
+          opacity: 0.9;
+        }
+
+        #p10 {
+          width: 400px;
+          left: 30px;
+          top: 3900px;
+          border-right: 2px dotted #ffa187;
+          border-top: 3px solid #5b845d;
+          border-right: 2px dashed #bf73f6;
+          border-left: 4px double #7273e3;
+          font-size: 16px;
+          opacity: .95;
+        }
+
+        #p11 {
+          width: 400px;
+          right: 170px;
+          top: 4400px;
+          border-top: 1px dotted #5b845d;
+          border-left: 2px solid #ffa187;
+          border-right: 5px dotted #bf73f6;
+          border-bottom: 2px dotted #7273e3;
+          font-size: 15px;
+          opacity: .9;
+        }
+
+
+        #p12 {
+          width: 600px;
+          right: 120px;
+          top: 4800px;
+          border-right: 2px dotted #ffa187;
+          border-top: 3px solid #5b845d;
+          border-right: 2px dashed #bf73f6;
+          border-left: 4px double #7273e3;
+          font-size: 15px;
+          opacity: 0.1;
+        }
+
+
+
+        /* second element */
+        img {
+          position: fixed;
+          top: 50px;
+          right: 20px;
+          width: 800px;
+          opacity: 0.9;
+          border-radius: 10% 0% 0% 10%;
+        }
+
+        img:hover {
+          z-index:30;
+        }
+
+        #sky {
+          top: 0px;
+          left: 0px;
+          width: 2000px;
+          opacity: 0.5;
+          border-radius: 0% 0% 0% 0%;
+          z-index: -10;
+        }
+
+        #bricks {
+          width: 300px;
+          left: 10px;
+          top: 10px;
+          
+          font-size: 16px;
+          opacity: 0.8;
+          border-radius: 10% 10% 10% 10%;
+          z-index: -5;
+
+          transition: height 3s ease-in;
+        }       
+        
+        #bricks:hover {
+          height: 100vh;
+          opacity:0.7;
+          filter: sepia(50%);
+        }
+        
+        #trash {
+          width: 300px;
+          left: 350px;
+          top: 500px;
+
+          font-size: 14px;
+          opacity: 1;
+          border-radius: 10% 10% 0% 0%;
+          transition: height 3s ease-out;
+        }     
+
+        #trash:hover {
+          height: 100vh;
+          opacity:0.9;
+          filter: sepia(50%);
+        }
+
+
+        #flowers {
+          width: 100px;
+          right: 200px;
+          top: 300px;
+
+          font-size: 14px;
+          opacity: 0.8;
+          border-radius: 10% 10% 0% 0%;
+          transition: height 3s ease-in-out;
+        }     
+
+        #flowers:hover {
+          height: 100vh;
+          opacity:0.7;
+          filter: sepia(50%);
+        }
+
+
+        video {
+          position: fixed;
+          width: 30vw;
+          top: 2vh;
+          right: 2vw;
+          border-radius: 100px 100px 100px 100px;
+          z-index: 10;
+          opacity: 0.6;
+        }
+
+        span {
+          font-size: 24px;
+          border-left: 4px double #7273e3;
+          filter: sepia(100%);
+        }
+
+      </style>
+    </head>
+
+    <body>
+
+      <img id="sky" src="sky.jpg">
+      <img id="flowers" src="flowers.jpg">
+      <img id="bricks" src="bricks.jpg">
+      <img id="trash" src="trash.jpg">
+
+      <!-- video sourced from pixabay -->
+      <video loop controls id="waterdrops" src="waterdrops.mp4" type=""video/mp4"></video>
+
+      <div><a id="biglink" href="https://jaykim.substack.com/">seaweed</a></div>
+
+      <div class="text" id="p12">
+        *<:o)
+        <br>
+        <a href="https://jaykim.substack.com/">Seaweed</a>, it is 9pm; this is the end of this letter; I have a few upcoming projects in mind, like serializing a story(!), but my history with projects is so shite that… who knows. In the end the end is the end; all I have left are a few links below.
+        <br>
+        A song I like these days
+        <br>
+        An essay about useless language that I sort of enjoyed
+        <br>
+        A list of books that you should consider buying/borrowing because I am trying to PURGE. If you are interested in buying any of the no’s, maybe’s, or maybe even the yes’s (which can also be borrowed) (for $1-5), let me know.
+        <br>
+        Ok bye. I hope that you’ve been doing fun things.
+      </div>
+
+
+      <div class="text" id="p11">
+        We do find comfort in each other. We feel the heat emanate from each other’s <span>skin</span> and want to hide in it, taste each other until we’re dead. So I do forget that I’m a surface and that you too are a surface. I ignore some of my thoughts so that I can conclude that I am wrong. We are lying on the floor, our heads resting on cushions, not looking at each other, our words forming ephemeral bridges in the air. We are a quiet grove of <span>trees</span>. The couple of feet between us is equal to a thousand miles, but we look upon each other in peace and in irregular moments, the tips of our branches touch when the wind sifts through us.
+      </div>
+
+
+      <div class="text" id="p10">
+        It is easier to say I’m a <span>surface</span> when I’m writing, wrapping words around the thoughts that are forming a rope inside my mouth. But the other night, while I was walking around passing the familiar house-lined blocks and sidewalks strewn with leaves, a trash can at every other corner, I still thought you’re a surface, I’m a surface, you’re a surface, I’m a surface.
+        <br>
+        There are moments when I am sitting across from someone—an old friend, a person I’ve just met—and I wish I knew them better. As we stare at each other and describe our days, watch as our words slip into the topic of our childhood traumas, I have so many doubts. Their face is impenetrable. We blink to guard ourselves. Long, long ago, three paragraphs ago, I wrote that I felt vulnerable from <span>eye contact</span>, but I don’t think I would mind if someone knew the entirety of my mind. Yet, I withhold. 
+      </div>
+
+      <div class="text" id="p9">
+        Sometimes, seeing other people’s surface break is frankly embarrassing; sometimes, I wish I wasn’t their witness. I once thought that leaves were leaves and I once thought that <span>eye contact</span> scared me because I preferred to not see another person see me. Ignorance (of <span>eye contact</span>) is bliss. But I think I am also scared of what I will see. The pupil is a cave. Caves are scary because you don’t know what could be inside them. I just want to 保全 their 面子… even though their 面子 is safe. My vision is too sorely human and myopic to see anything in someone’s eyes. Never fear, friend. I will only ever see your surface.
+      </div>
+
+      <div class="text" id="p8">
+        In Korean, we say <span>안면(顔面)을 트다</span>, to break open one’s face, when we form an acquaintance with someone. So if I was to explain my relationship to the barista at the café around the corner to where I live, I would say, “we’ve broken face.” Yet, we also say we are saving face, or <span>체면을 지키다</span> in Korean, or <span>保全面子</span> in Chinese, to describe the act of protecting our dignity. 
+        <br>
+        Life is so hard. Every day, we must break face and maintain face.
+      </div>
+
+
+      <div class="text" id="p7">
+        I like seeing emotions leak over people’s faces. When you’re riding the train and see someone suddenly smile at the air in front of them; when you’re lying in bed at night and remember that five years ago, you said the most horrifically cringey thing in reply to an acquaintance you met at a party, and it’s not a big deal but you realize your face is wincing; when you are walking around st. marks and see someone’s face suddenly crumple, their right hand forming a fist beside their thigh. Emotional leakage feels like an error because they are inadvertent. We prefer intentionality over loss of control. But I wonder if these moments of leakage are pure expressions of what lies underneath. A moment when the surface breaks.
+        <br>
+        I live for surface breakage. (I’m exaggerating.)
+      </div>
+
+      <div class="text" id="p6">
+        The <span>whale</span> is holding Jonah inside his stomach, but the <span>whale</span> has no idea Jonah is inside him.
+        <br>
+        I don’t fully know what is inside me, but I do have some control over my surface. The appearance of my face at any given moment depends on how tired I am, how much I like you, where I am. Sometimes, my face is soft and sweet; in these moments, I would do anything for you. Sometimes, my face, it is so callously dense that I feel sorry. Usually, I can tell when my surface doesn’t match what’s underneath. But not always.
+      </div>
+
+      <div class="text" id="p5">
+        I am a network of my likes and dislikes, my memories and my anxieties. I know there is something underneath them all, pulling them together, but even I am uncertain of what that is. I will understand <span>myself</span> better as I age; I have and always will comprehend myself better than I will comprehend anyone else. I will never fully know myself though, know myself to the point where I could predict every second of my behavior. Thinking that I can’t know everything about my life as I am living it, analyze every single thought or feeling I have to a stable degree of accuracy, is a strange thought to think. Last week, I graphed the keys of my favorite songs and learned I have a preference for songs in minor keys. I don’t know why. And I do wonder why in my interactions with people, I have annoying tendencies that I have learned to rein back over the years, but time and time again, these tendencies rise to the surface. I will continue to mystify myself.
+      </div>
+
+
+      <div class="text" id="p4">
+        Don’t judge a book by its cover
+        <br>
+        This is a <span>proverb</span>.
+        <br>
+        A saying qualifies as a proverb by being widely applicable; a wise piece of advice.
+        <br>
+        This proverb works nicely with books.
+        <br>
+        Example #1: Some of my favorite books have the ugliest covers.
+        <br>
+        Example #2: I tend to choose Korean books by their cover. This strategy has had poor results.
+        <br>
+        What is convenient about books is that you can open and read them from beginning to end.
+        <br>
+        This proverb may actually be most applicable to books. With non-books, you may find that you have no other choice but to judge based on the cover.
+        <br>
+        Example: You cannot open people and read them from beginning to end.
+      </div>
+
+      <div class="text" id="p3">
+        Because I am a lovable <span>iceberg</span> and I believe everyone else is too, I hate dating apps. No, I mean I think dating apps are kind of fun, fun in a terrible kind of way. The turmoil that some (I) experience with dating apps seems to be the ceaseless questioning of what three prompts and five images could convey one’s personage to another. Pain! To enjoy dating apps, you (I) have to recognize that that isn’t the point of dating apps and also, that you could ask the same question about reality. What does your surface need to look like to convey who you are underneath? We may make three-dimensional figures in the real, non-virtual side of the world, but that doesn’t mitigate the fact that we can only ever see each other’s surface. We are <span>icebergs</span> floating alongside each other; we cannot peek beneath the waves. Conversation with each other and time together may chip away at the ice, it may even seem more pliable, but we will still just be scratching one another’s surface. I thought of a new metaphor because when you and I are <span>icebergs</span>, there are at least two wrong implications. That it is our efforts to understand each other better that are deficient. That we are as solid and defined as <span>icebergs</span>. Instead, you and I are bottomless bags. A vessel that goes on forever and ever and ever and ever. When a bag has no bottom, you can never get closer to the center no matter how far you reach.
+      </div>
+
+      <div class="text" id="p2">
+        There is a <span>cello</span> leaning on you, clasped between your knees. Draw the bow across the string (use your right hand). Fail to put enough weight on the bow and the bow skids across the string instead of creating the necessary friction to vibrate it. The <span>cello</span> will still make a sound, but it will have what we call a <b>“surfacey”</b> tone. Like the moan of a croaking ghost. Dig into the string, scoop with your bow, avoid surfacey sounds, the reasonable listener advises.
+      </div>
+
+      <div class="text" id="p1">
+        Dear <a href="https://jaykim.substack.com/">seaweed</a>,
+        <br>
+        You are a lovable <span>iceberg</span> floating in the ocean. From above, you are digestible and smooth, a pretty dollop of ice. Below the waves, however, you could be anything, you are incomprehensible, massive and jagged. The surface is apparently a poor indicator of your full being.
+        <br>
+        Maybe because we are lovable <span>icebergs</span>, we are critical of things that have no depth. When we describe a conversation, a relationship, or an essay as <b>“surface-level,”</b> we are denigrating it for its uselessness.
+      </div>
+      
+
+    </body>
+
+  </html>
