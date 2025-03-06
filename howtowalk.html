@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>how to walk</title>
+    <link rel="shortcut icon" href="icon.png">
+    <meta charset="UTF-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inconsolata:wght@200..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
       body {
         background-color: skyblue;
@@ -19,7 +28,7 @@
       }
       #seaweed {
         font-size: 20px;
-        color: blue;
+        color: orange;
         z-index: 20;
       }
       #para1 {
@@ -73,7 +82,49 @@
         opacity:0.6;
       }
 
+      #bottomright {
+        position: fixed;
+        background-color: white;
+        display: none;
+        width:9vw;
+        min-width: 40px; 
+        max-width: 300px;
+        height:9vh;
+        min-height: 40px;
+        max-height: 300px;
+        bottom:5vh;
+        right:5vh;
+        z-index: 10000;
+      }
 
+      @media only screen and (min-width: 768px) and (max-width: 1024px){
+        body {
+          background-color:green;
+        }
+
+        #bottomright {
+          top: 5vh; 
+          display: inline;
+        }
+
+        #seaweed {
+          color: white;
+        }
+      }
+      @media (max-width: 600px) {
+        body {
+          background-color:blueviolet;
+        }
+
+        #bottomright {
+          top: 5vh; 
+          display: inline;
+        }
+
+        #seaweed {
+          color: white;
+        }
+      }
 
     </style>
 
@@ -83,8 +134,8 @@
 <body>
   <div onclick="innerHTML = Date()" id="seaweed">Dear seaweed,</div>
 
-  <img id="penguin" src="penguin.png">
-  <img id="smallpeng" src="smallpeng.jpg">
+  <img id="penguin alt="a picture of a cute penguin that is in the middle of waddling" src="penguin.png">
+  <img id="smallpeng" alt="a picture of an even smaller penguin out in his icy blue habitat" src="smallpeng.jpg">
 
 <div class="para" id="para1">
   The train conductor mumbles, “This stop is <span id="address">36th</span> Avenue… next stop is…” then trails off. The Penguiness presses her feet into the stained floor to stand up. She flexes her abdomen in anticipation of the train’s recoil as it stops. As the train’s wheels screech across the tracks, The Penguiness is on high f*cking alert. Her fingers are spread, her knees are bent, her abs are taut. Thanks to her mind-muscle connection, she does not fall. The Penguiness swings her massive tote over her shoulder and strides out the doors. She shuffles down the steps and pelvic thrusts the turnstile with enough force to get through in one go. Ze Penguiness heads home. As she waddles across the long street lined with a Papa Johns, a sketch club, and a brightly lit barber shop with black-haired men getting low fades, she focuses on the humdrum act of walking.
@@ -106,9 +157,21 @@
   This is why I am always thinking about walking as I am walking.
 </div>
 
+<div id="bottomright"></div>
+
 
 <script src = "C.js"></script>
+<script> 
+  const isComp = window.matchMedia('(min-width: 600px)')
+  const isPhone = window.matchMedia('(max-width: 600px)')
 
+  if (isComp.matches) {
+    alert("yoU're probably on your desktop! i'm watching yoU!");
+  }
+  if (isPhone.matches) {
+    alert("yoU're on your phonEEEEE! Or just a small window lol");
+  }
+</script>
 </body>
 
 
